@@ -8,7 +8,7 @@ import {
   FaLinux,
   FaAndroid,
 } from "react-icons/fa";
-import { Platform } from "./hooks/useGames";
+import { Platform } from "../hooks/useGames";
 
 interface Props {
   platforms: Platform[];
@@ -33,8 +33,10 @@ const PlatformiconList = ({ platforms }: Props) => {
 
   return (
     <HStack marginY={1}>
-      {platforms.map((platform) => {
-        return <Icon as={iconMap[platform.slug]} color="gray.500" />;
+      {platforms.map((platform, index) => {
+        return (
+          <Icon key={index} as={iconMap[platform.slug]} color="gray.500" />
+        );
       })}
     </HStack>
   );
