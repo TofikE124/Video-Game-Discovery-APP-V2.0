@@ -20,11 +20,11 @@ const useData = <T>(endpoint:string)=>{
         .get<FetchDataRespons<T>>(endpoint,{signal:controller.signal})
         .then((res) => {
             setData(res.data.results)
+            setLoading(false)
         })
         .catch((err) => {
             if(err instanceof CanceledError) return
             setError(err.message)
-        }).finally(()=>{
             setLoading(false)
         })
         return () => controller.abort()
