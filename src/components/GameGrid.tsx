@@ -20,7 +20,8 @@ const GameGrid = ({ gameQuery }: Props) => {
     isFetchingNextPage,
     hasNextPage,
   } = useGames(gameQuery);
-  const skeltons = new Array(10).fill(0).map((index) => index);
+  let skeltons = new Array(10);
+  skeltons = skeltons.map((index) => index);
   if (error) return <Text>{error.message}</Text>;
 
   const fetchedGamesCount =
@@ -42,8 +43,8 @@ const GameGrid = ({ gameQuery }: Props) => {
               </GameCardContainer>
             ))
           : ""}
-        {data?.pages.map((page) => (
-          <React.Fragment>
+        {data?.pages.map((page, index) => (
+          <React.Fragment key={index}>
             {page.results.map((game) => (
               <GameCardContainer key={game.id}>
                 <GameCard game={game} />
