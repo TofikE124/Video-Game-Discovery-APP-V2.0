@@ -11,7 +11,7 @@ interface Props {
 
 const GameGrid = ({ gameQuery }: Props) => {
   const { data, error, loading } = useGames(gameQuery);
-  const skeltons = new Array(20).fill(0).map((val, index) => index);
+  const skeltons = new Array(20).fill(0).map((index) => index);
 
   if (error) return <Text>{error}</Text>;
 
