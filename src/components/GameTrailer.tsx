@@ -9,9 +9,9 @@ const GameTrailer = ({ slug }: Props) => {
   const { data: trailers, error, isLoading } = useTrailer(slug!);
   const first = trailers?.results[0];
   if (!first) return null;
+
   if (isLoading) return <Spinner />;
   if (error) throw error;
-
   return (
     <Box marginTop={10} display="flex" justifyContent="center">
       <video
