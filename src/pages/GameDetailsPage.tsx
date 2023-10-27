@@ -4,6 +4,7 @@ import ScallableText from "../components/ExpandableText";
 import useGameDetails from "../hooks/useGameDetails";
 import GameAttributes from "../components/GameAttributes";
 import GameTrailer from "../components/GameTrailer";
+import GameScreenshots from "../components/GameScreenshots";
 
 const GameDetailsPage = () => {
   const { slug } = useParams();
@@ -17,6 +18,7 @@ const GameDetailsPage = () => {
       <ScallableText maxChars={300}>{game.description_raw}</ScallableText>
       <GameAttributes game={game} />
       <GameTrailer slug={slug!} />
+      <GameScreenshots slug={slug!} />
     </>
   );
 };

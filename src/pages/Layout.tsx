@@ -1,22 +1,10 @@
-import { Grid } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => (
   <>
     <NavBar />
-    <Grid
-      templateAreas={{
-        base: `"main"`,
-        lg: `"aside main"`,
-      }}
-      templateColumns={{
-        base: "1fr",
-        lg: "200px 1fr",
-      }}
-    >
-      <Outlet />
-    </Grid>
+    <Outlet />
   </>
 );
 
