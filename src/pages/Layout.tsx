@@ -15,7 +15,6 @@ const Layout = () => (
         lg: "200px 1fr",
       }}
     >
-      <GridItem area="nav" paddingX={2}></GridItem>
       <Outlet />
     </Grid>
   </>

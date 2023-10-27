@@ -1,3 +1,4 @@
+import { config } from "@react-spring/web";
 import axios, { AxiosRequestConfig } from "axios";
 
 export interface FetchDataResponse<T> {
@@ -19,5 +20,8 @@ export default class APIClient<T> {
     return axiosInstance
       .get<FetchDataResponse<T>>(this.endpoint, config)
       .then((res) => res.data);
+  };
+  getSingle = (config?: AxiosRequestConfig) => {
+    return axiosInstance.get<T>(this.endpoint, config).then((res) => res.data);
   };
 }
