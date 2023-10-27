@@ -1,4 +1,4 @@
-import { Heading, SimpleGrid, Box, Spinner, GridItem } from "@chakra-ui/react";
+import { Heading, SimpleGrid, Spinner, GridItem } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import ScallableText from "../components/ExpandableText";
 import useGameDetails from "../hooks/useGameDetails";

@@ -1,5 +1,4 @@
 import { Box, Heading } from "@chakra-ui/react";
-import { child } from "firebase/database";
 import { ReactNode } from "react";
 
 interface Props {

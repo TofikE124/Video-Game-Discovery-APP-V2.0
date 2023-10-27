@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import ms from "ms";
 import data from "../data/genres";
 import APIClient, { FetchDataResponse } from "../services/api-client";
-import { Genre } from "./entities/Genre";
+import Genre from "./entities/Genre";
 
 const apiClient = new APIClient<Genre>("/genres");
 
