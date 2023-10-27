@@ -1,4 +1,3 @@
-import { config } from "@react-spring/web";
 import axios, { AxiosRequestConfig } from "axios";
 
 export interface FetchDataResponse<T> {
